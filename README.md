@@ -2,6 +2,7 @@
 
 A TypeScript school group project focused on managing large datasets.  
 This web app efficiently searches and sorts through 100,000 fake book entries using optimized algorithms.
+This was before we were taught OOP so everything is a little messy.
 
 ---
 
