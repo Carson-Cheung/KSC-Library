@@ -1,0 +1,258 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-size: cover; /*the start function in script.ts controls the background so its random*/
+  background-position: center; /*its not random rn cuz i wanna see samyar reaction to this bg*/
+}
+
+input {
+  text-align: center;
+}
+
+select {
+  text-align: center;
+}
+
+.navbar {
+  width: 100%;
+  height: 10%;
+  background-color: rgb(0, 0, 0, 0.8);
+}
+
+.main-elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  font-family: "myFont", Arial, Helvetica, sans-serif;
+}
+
+.search-elements {
+  width: 80%;
+  text-align: center;
+}
+
+button {
+  background-color: rgb(0, 0, 0, 0.75) !important;
+}
+
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(0, 0, 0, 0.75) !important;
+}
+
+table {
+  border: 1px solid #f0ad4e !important;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-width: 1px !important;
+  border-color: inherit;
+  border-style: solid;
+}
+
+tr {
+  border-width: 2px !important;
+  border-color: inherit;
+  border-style: solid;
+}
+
+button:hover {
+  background-color: #f0ad4e !important;
+  color: black !important;
+}
+
+.search-interface {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(0, 0, 0, 0.75);
+}
+
+.table-interface {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(0, 0, 0, 0.75);
+}
+
+.bonus-interface {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(0, 0, 0, 0.75);
+}
+
+.interface {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.seperator {
+  width: 10%;
+}
+
+button:active {
+  color: #f0ad4e !important;
+}
+
+#back-button,
+#forward-button {
+  width: 45%;
+}
+
+#table-navigator {
+  display: none;
+}
+
+#page-number {
+  width: 10%;
+  color: #f0ad4e;
+  text-align: center;
+  border: #f0ad4e;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgb(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar-wrapper {
+  display: none;
+}
+
+#solve-btn {
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+#bonus-result {
+  margin: 0;
+}
+
+.button-wrapper {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.parent-container {
+  display: none;
+  flex-direction: column;
+}
+
+.input-wrapper {
+  width: 80%;
+}
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+ * starting here is the code for our loading screen.
+ * Link for where we got the code:
+ * https://blog.hubspot.com/website/css-loading-animation
+*/
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border: 3px solid #3c3c3c;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #fff000;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #fff000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.ring:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid #fff000;
+  border-right: 3px solid #fff000;
+  border-radius: 50%;
+  animation: animateC 2s linear infinite;
+}
+span {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  animation: animate 2s linear infinite;
+}
+span:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff000;
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 20px #fff000;
+}
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}

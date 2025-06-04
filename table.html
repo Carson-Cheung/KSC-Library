@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>KSC Library</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="/favicon.png" />
+</head>
+
+<body class="text-warning">
+  <div class="loader-wrapper">
+    <div class="ring">
+      Loading
+      <span></span>
+    </div>
+  </div>
+  <div id="navbar-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark border border-warning border-2"
+      style="padding-top: 0rem; padding-bottom: 0rem;">
+      <div class="container-fluid">
+        <a class="navbar-brand text-warning" href="./index.html">Search</a>
+        <a class="navbar-brand text-warning">Kasra, Samyar and Carson</a>
+        <a class="navbar-brand text-warning" href="./table.html">Table</a>
+      </div>
+    </nav>
+  </div>
+  <div id="parent-container" style="display: none; 
+        flex-direction: column; 
+        margin-top: 3rem;
+        margin-left: 1rem;
+        margin-right: 1rem;">
+    <div class="container main-elements">
+      <div class="table-interface border border-warning border-2">
+        <h1>Table</h1>
+        <p id="load-time">Load Time:</p>
+        <h5 id="time">search time displayed here</h5>
+
+        <div class="input-wrapper input-group">
+          <select id="categories" class="form-select">
+            <option value="firstName">First Name</option>
+            <option value="lastName">Last Name</option>
+            <option value="gender">Gender</option>
+            <option value="guid">GUID</option>
+            <option value="bookName">Book Name</option>
+          </select>
+          <select id="sort-type" class="form-select">
+            <option value="ascending">Ascending</option>
+            <option value="descending">Descending</option>
+          </select>
+        </div>
+        <button class="btn btn-outline-warning" onclick="sortTable(document.getElementById('sort-type').value)"
+          style="margin-top: 8px; width: 40%">
+          Sort
+        </button>
+      </div>
+    </div>
+    <div id="table-navigator" style="display: block; margin-top: 1.5rem;">
+      <div class="d-flex justify-content-center input-group button-wrapper">
+        <button id="back-button" onclick="goBack();" class="btn btn-outline-warning">
+          Backward
+        </button>
+        <div id="page-number"></div>
+        <button id="forward-button" onclick="goForward();" class="btn btn-outline-warning">
+          Forward
+        </button>
+      </div>
+      <div class="table-wrapper">
+        <table id="table">
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Gender</th>
+              <th>Book Name</th>
+              <th>GUID</th>
+              <th>Refrences</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script src="./dist/DO_NOT_TOUCH.js"></script>
+  <script src="./dist/script.js"></script>
+</body>
+
+</html>

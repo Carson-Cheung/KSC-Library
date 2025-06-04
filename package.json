@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@types/jquery": "^3.5.27",
+    "bootstrap": "^5.3.2",
+    "node-ts": "^6.0.1",
+    "save-dev": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
